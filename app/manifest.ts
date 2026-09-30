@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "IGGOULFANE",
     short_name: "IGGOULFANE",
-    description: "Coopérative marocaine dédiée au miel et au savoir-faire local.",
+    description: "تعاونية IGGOULFANE للعسل الطبيعي في تابونت، ورزازات.",
     start_url: "/",
     display: "standalone",
     background_color: "#fdf9f3",
