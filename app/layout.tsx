@@ -14,11 +14,16 @@ export const metadata: Metadata = {
   title: { default: "IGGOULFANE | تعاونية العسل", template: "%s | IGGOULFANE" },
   description: "تعاونية IGGOULFANE للعسل الطبيعي في تابونت، ورزازات. عسل طبيعي 1 كلغ بثمن 300 درهم.",
   applicationName: "IGGOULFANE",
+  keywords: ["IGGOULFANE", "natural honey", "Tabounte", "Ouarzazate", "miel naturel"],
+  authors: [{ name: "IGGOULFANE" }],
+  creator: "IGGOULFANE",
   icons: { icon: "/iggoulfane-logo.jpeg", apple: "/iggoulfane-logo.jpeg" },
   openGraph: {
     title: "IGGOULFANE | تعاونية العسل",
     description: "تعاونية مغربية للعسل الطبيعي في تابونت، ورزازات.",
     type: "website",
+    locale: "ar_MA",
+    siteName: "IGGOULFANE",
     images: [{ url: "/iggoulfane-logo.jpeg", alt: "IGGOULFANE" }],
   },
 };
