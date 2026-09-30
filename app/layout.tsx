@@ -7,7 +7,10 @@ const display = Playfair_Display({ subsets: ["latin"], variable: "--font-display
 const sans = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-sans" });
 const arabic = Noto_Kufi_Arabic({ subsets: ["arabic"], variable: "--font-arabic" });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
 export const metadata: Metadata = {
+  ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
   title: { default: "IGGOULFANE | Coopérative de miel", template: "%s | IGGOULFANE" },
   description: "IGGOULFANE, coopérative marocaine dédiée au miel et au savoir-faire local.",
   applicationName: "IGGOULFANE",
