@@ -22,7 +22,7 @@ NEXT_PUBLIC_SITE_URL=
 NEXT_PUBLIC_WHATSAPP_NUMBER=
 ```
 
-The WhatsApp number, product price, weight, precise origin and final cooperative story are intentionally not invented. They should only be published after confirmation.
+Confirmed public details: natural honey, 1 kg, 300 MAD, Tabounte (Ouarzazate), and WhatsApp ordering. Stitch concept visuals are temporary references until real cooperative photography is available.
 
 ## Checks
 ```bash
