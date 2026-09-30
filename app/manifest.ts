@@ -1,0 +1,1 @@
+import type {MetadataRoute} from "next";export default function manifest():MetadataRoute.Manifest{return{name:"IGGOULFANE",short_name:"IGGOULFANE",description:"Moroccan honey cooperative",start_url:"/",display:"standalone",background_color:"#fbf8f1",theme_color:"#b85c22"}}
