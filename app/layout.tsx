@@ -11,13 +11,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
 export const metadata: Metadata = {
   ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
-  title: { default: "IGGOULFANE | Coopérative de miel", template: "%s | IGGOULFANE" },
-  description: "IGGOULFANE, coopérative marocaine dédiée au miel et au savoir-faire local.",
+  title: { default: "IGGOULFANE | تعاونية العسل", template: "%s | IGGOULFANE" },
+  description: "تعاونية IGGOULFANE للعسل الطبيعي في تابونت، ورزازات. عسل طبيعي 1 كلغ بثمن 300 درهم.",
   applicationName: "IGGOULFANE",
   icons: { icon: "/iggoulfane-logo.jpeg", apple: "/iggoulfane-logo.jpeg" },
   openGraph: {
-    title: "IGGOULFANE | Coopérative de miel",
-    description: "Coopérative marocaine dédiée au miel et au savoir-faire local.",
+    title: "IGGOULFANE | تعاونية العسل",
+    description: "تعاونية مغربية للعسل الطبيعي في تابونت، ورزازات.",
     type: "website",
     images: [{ url: "/iggoulfane-logo.jpeg", alt: "IGGOULFANE" }],
   },
