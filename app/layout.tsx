@@ -7,7 +7,7 @@ const display = Playfair_Display({ subsets: ["latin"], variable: "--font-display
 const sans = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-sans" });
 const arabic = Noto_Kufi_Arabic({ subsets: ["arabic"], variable: "--font-arabic" });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://iggoulfane.vercel.app";
 
 export const metadata: Metadata = {
   ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
