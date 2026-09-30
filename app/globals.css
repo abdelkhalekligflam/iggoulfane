@@ -40,3 +40,32 @@ nav a:hover{opacity:.6}
 .photo-gallery-a{background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSwLDK9NNIi8zsi7GEz_e6RBZG-em5DexZTQgqtsMlmVr54MWkE9Nwkxzt_6E7cj4_KmOl_mltQUs9H69WFbFBzrRves2FATzQdL8Dh-liIjJ8GTVC69fCHPybsZlEPiEMyHs13k8tdMX5BDmX5sIbZG0tcK4mWVQwnUQxqCqpQylAVl0w9_pS3CACVYGt7gHFLj2kzQpSBGlqWPjWgC6PRJPQHGjApyI6PmF2_XIqxhrdzTT8crYj")}
 .photo-gallery-b{background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuAVaa7dp3De9lgPoQmh9wv8WBTljotOsT1_micpLNjbBVOcW0buxVppPDpIQ0MSBoJ34gRJWmBn0V_ln4k7B7_OmCjgaHjAOFAlJ2_4tCEKPHBfsWls4PELiLlMdQZI5V7If_BkY3HElRuO4VXYx9NGuQJOW2BDIJc6lOdx1apRC2rRSAGJ_4mHaQLevjq6cDPK6VxrpyDv8ep1Hl6cfcuYWrBwgzvY3GFz9yvC4CfM3AluA1-fTm9V")}
 .photo-gallery-c{background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuAyFQbMJtmbT63FuuqF4PBrVW5cuWxncV0Mze2Y5SxfMV9wUayDiIJWH-MvrolueaebEcreGmocrSHIcOeGWEYq32qQd8cdQpYwgeY5fRTzrk07ppEimKEHYreTnto4KBAFjcVPtOmHB_tGac2fZfTfVMHLsqpDt0Q7JS37EXl7OY72b1bV6sEWZjkJmk1orTJj7QlPv4RBkUVlJ13VsfT7U-xinjpVbS2KYAFTGbtx_bkFeNAdb3US")}
+
+/* Subtle motion system */
+@keyframes iggoulfane-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes iggoulfane-reveal{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+.photo{transition:transform .65s cubic-bezier(.2,.7,.2,1),box-shadow .65s ease,filter .65s ease;background-size:cover}
+.photo:hover{transform:translateY(-6px) scale(1.015);box-shadow:0 24px 55px rgba(43,32,27,.16);filter:saturate(1.06)}
+.photo-hero{animation:iggoulfane-float 7s ease-in-out infinite}
+.photo-hero:hover{transform:translateY(-7px) scale(1.018)}
+.photo:after{transition:transform .45s ease,background .45s ease}
+.photo:hover:after{transform:translateY(-4px);background:#fdf9f3f5}
+
+.card{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(43,32,27,.10);border-color:#cfbca8}
+
+.section .wrap{animation:iggoulfane-reveal .7s ease both}
+nav a{position:relative}
+nav a:after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:center;transition:transform .25s ease}
+nav a:hover:after{transform:scaleX(1)}
+
+@media(max-width:760px){
+  .photo:hover{transform:none;filter:none}
+  .photo-hero{animation-duration:8s}
+}
+@media(prefers-reduced-motion:reduce){
+  .photo-hero,.section .wrap{animation:none}
+  .photo,.card,.photo:after,nav a:after{transition:none}
+  .photo:hover,.card:hover{transform:none}
+}
